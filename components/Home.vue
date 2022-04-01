@@ -14,7 +14,7 @@
                         </div>
                     </v-col>
                     <v-col md="6">
-                    <img class="img-profile" src="@/assets/images/fix.png" style="">
+                    <img class="img-profile" src="@/assets/images/fix.png" style="" v-show="this.$vuetify.breakpoint.md || this.$vuetify.breakpoint.lg || this.$vuetify.breakpoint.xl">
                     </v-col>
                 </v-row>
             </div>

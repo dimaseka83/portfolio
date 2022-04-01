@@ -4,10 +4,10 @@
             <v-row>
                 <v-col md="12">
                     <div class="d-flex justify-center align-center mt-16 mb-16">
-                        <span class="text-h5 font-weight-light font-italic pt-16 pb-16">
+                        <span class="text-h5 font-weight-light font-italic pt-16 pb-16 text-center">
                             A learner. Learning is a never ending journey that each of us must embark on adventurously!
                             <v-spacer></v-spacer>
-                        <div class="text-center font-weight-bold">"Ainun Nadjib"</div>
+                        <div class="font-weight-bold">"Ainun Nadjib"</div>
                         </span>
                         
                     </div>

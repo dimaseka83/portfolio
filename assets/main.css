@@ -1,0 +1,22 @@
+.el{
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.08) !important;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.light{
+    background-color: rgb(238, 234, 245) !important;
+}
+
+.dark{
+    background-color: rgb(27, 27, 27) !important;
+}
+.img-profile{
+    max-width: 750px;
+}
+
+.img-profile2{
+    max-width: 300px;
+}

@@ -22,7 +22,7 @@
             <v-icon>light_mode</v-icon>
         </v-btn>
         </v-app-bar>
-        <v-navigation-drawer v-model="drawer" absolute temporary>
+        <v-navigation-drawer v-model="drawer" fixed temporary>
             <v-list nav dense>
                 <v-list-item-group v-model="group" >
                     <v-list-item v-for="(nav, i) in navigation" :key="i" @click="$router.push(nav.path)" active-class="deep-purple--text text--accent-4">

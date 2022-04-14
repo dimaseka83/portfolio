@@ -12,7 +12,7 @@
                 <v-col md="12">
                     <v-slide-group>
                         <v-slide-item v-for="(p,i) in projects" :key="`projects-${i}`">
-                            <v-card color="surface" width="300" class="el ma-2 mb-5 mr-5">
+                            <v-card color="surface" width="300" class="el ma-2 mb-5 mr-5" link :href="p.link" target="_blank">
                                 <v-img height="300" :src="p.image">
                                     <template #placeholder>
                                         <v-row class="fill-height" justify="center" align="center">

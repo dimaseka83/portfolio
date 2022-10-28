@@ -46,5 +46,29 @@
         "image": "https://images.unsplash.com/photo-1602690105062-a4469ad9c5ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fGFwcHMlMjB0b3VyaXN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
         "tech": ["Flutter", "Dart"],
         "link": "https://github.com/dimaseka83/dicoding_submission_flutter"
+    },
+    {
+        "id": 7,
+        "name": "Company Profie Bringin Software",
+        "description": "Company Profile Bringin Software on company Bringin Software, this is a full-stack web application. The application is built with the Laravel, VueJS, and Vuetify.",
+        "image" : "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=755&q=80",
+        "tech" : ["Laravel", "VueJS", "Vuetify"],
+        "link" : "https://www.bringinsoft.com/"
+    },
+    {
+        "id": 8,
+        "name": "Company Profie Berkah Araazak Utama",
+        "description": "Company Profile Berkah Araazak Utama on company Berkah Araazak Utama, this is a full-stack web application. The application is built with the Laravel, VueJS, and Vuetify.",
+        "image": "https://images.unsplash.com/photo-1519222970733-f546218fa6d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHdlYnNpdGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        "tech": ["Laravel", "VueJS", "Vuetify"],
+        "link": "https://berkaharazaakutama.com/"
+    },
+    {
+        "id": 9,
+        "name": "Company Profile Prasimax",
+        "description": "Company Profile Prasimax on company Prasimax, this is a front-end web application. The application is built with the VueJS, and Vuetify.",
+        "image": "https://images.unsplash.com/photo-1487014679447-9f8336841d58?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHdlYnNpdGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+        "tech": ["VueJS", "Vuetify"],
+        "link": "https://prasimax.com/"
     }
 ]

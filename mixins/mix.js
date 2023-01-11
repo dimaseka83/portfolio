@@ -4,7 +4,7 @@ export default{
             window.open('https://wa.link/vyreof', '_blank')
         },
         cv(){
-            window.open('https://drive.google.com/file/d/1IW7BVVBppKRsVQU2r7kcFkticKPyrOK2/view?usp=sharing', '_blank')
+            window.open('https://drive.google.com/file/d/1IFBdqHlOVOLpupnS0gqH-l3hdtixkMDO/view?usp=sharing', '_blank')
         },
         instagram(){
             window.open('https://www.instagram.com/dhimaseka01/', '_blank')

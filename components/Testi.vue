@@ -18,7 +18,7 @@
                 </v-col>
             </v-row>
             <v-row v-for="row in rows" :key="'row'+row">
-                <v-col md="6" v-for="(testi, i) in testiInRow(row)" :key="'row'+i">
+                <v-col v-for="(testi, i) in testiInRow(row)" :key="'row'+i">
                     <v-card class="mx-auto">
                         <v-card-text class="text-subtitle-1 font-weight-light">"{{testi.Testimoni}}"</v-card-text>
                     <v-card-actions>

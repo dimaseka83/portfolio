@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dhimasekaprasetya.netlify.app/sitemap.xml

@@ -1,12 +1,12 @@
 export const routes = [
   {
-    path: "/",
+    path: "/editorial",
     name: "editorial",
     component: () => import("./views/editorial/EditorialView.vue"),
     meta: { variant: "editorial" },
   },
   {
-    path: "/sticker",
+    path: "/",
     name: "sticker",
     component: () => import("./views/sticker/StickerView.vue"),
     meta: { variant: "sticker" },

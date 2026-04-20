@@ -18,8 +18,10 @@ const cvHref  = "https://drive.google.com/file/d/1IFBdqHlOVOLpupnS0gqH-l3hdtixkM
 
 <template>
   <header id="home" class="sb-hero">
-    <div class="sb-sticker sticker-1">★ {{ lang === "en" ? "Open to work" : "Terbuka" }}</div>
-    <div class="sb-sticker blue sticker-2">Malang, ID</div>
+    <div class="sb-stickers">
+      <div class="sb-sticker sticker-1">★ {{ lang === "en" ? "Open to work" : "Terbuka" }}</div>
+      <div class="sb-sticker blue sticker-2">Malang, ID</div>
+    </div>
 
     <h1 class="sb-hero-title">
       <template v-if="lang === 'en'">
@@ -59,7 +61,7 @@ const cvHref  = "https://drive.google.com/file/d/1IFBdqHlOVOLpupnS0gqH-l3hdtixkM
 <style scoped>
 .sb-hero {
   min-height: 100dvh;
-  padding: 100px 20px 60px;
+  padding: 80px 20px 60px;
   max-width: 1320px;
   margin: 0 auto;
   position: relative;
@@ -67,33 +69,55 @@ const cvHref  = "https://drive.google.com/file/d/1IFBdqHlOVOLpupnS0gqH-l3hdtixkM
   flex-direction: column;
   justify-content: center;
 }
-@media (min-width: 640px) { .sb-hero { padding: 120px 24px 60px; } }
+@media (min-width: 480px) { .sb-hero { padding: 90px 24px 60px; } }
+@media (min-width: 640px) { .sb-hero { padding: 120px 32px 60px; } }
 @media (min-width: 768px) { .sb-hero { padding: 140px 48px 80px; } }
 
+/* Mobile: stickers flow in a row above the title */
+.sb-stickers {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
 .sb-sticker {
-  position: absolute;
-  padding: 10px 18px;
+  position: static;
+  padding: 7px 14px;
   background: var(--color-yellow);
   color: #111;
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   border-radius: 999px;
   box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
-  transform: rotate(-6deg);
   z-index: 2;
+  white-space: nowrap;
 }
+.sticker-1 { transform: rotate(-4deg); }
+.sticker-2 { transform: rotate(4deg); }
+
 .sb-sticker.blue   { background: var(--color-blue); color: #fff; }
 .sb-sticker.orange { background: var(--color-orange); color: #fff; }
 .sb-sticker.green  { background: var(--color-green); color: #fff; }
 
-.sticker-1 { top: 90px; right: 12px; font-size: 10px; padding: 7px 12px; }
-.sticker-2 { top: 130px; right: 110px; transform: rotate(8deg); font-size: 10px; padding: 7px 12px; }
+/* Tablet and up: stickers float absolutely */
 @media (min-width: 640px) {
-  .sticker-1 { top: 110px; right: 40px; font-size: 12px; padding: 10px 18px; }
-  .sticker-2 { top: 170px; right: 220px; font-size: 12px; padding: 10px 18px; }
+  .sb-stickers {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    display: block;
+    margin: 0;
+  }
+  .sb-sticker {
+    position: absolute;
+    pointer-events: all;
+  }
+  .sticker-1 { top: 110px; right: 40px;  font-size: 12px; padding: 10px 18px; transform: rotate(-6deg); }
+  .sticker-2 { top: 170px; right: 220px; font-size: 12px; padding: 10px 18px; transform: rotate(8deg);  }
 }
 @media (min-width: 1024px) {
   .sticker-1 { top: 120px; right: 60px; }
@@ -167,19 +191,21 @@ const cvHref  = "https://drive.google.com/file/d/1IFBdqHlOVOLpupnS0gqH-l3hdtixkM
 .sb-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }
 @media (min-width: 640px) { .sb-chips { gap: 10px; margin-top: 24px; } }
 .sb-chip {
-  padding: 8px 14px;
+  padding: 7px 12px;
   border-radius: 999px;
   background: var(--color-paper);
   border: 2px solid var(--color-ink);
   font-weight: 600;
-  font-size: 13px;
+  font-size: 12px;
   box-shadow: 3px 3px 0 var(--color-ink);
   transition: transform 0.2s, box-shadow 0.2s;
   cursor: none;
   color: inherit;
   text-decoration: none;
+  white-space: nowrap;
 }
-@media (min-width: 640px) { .sb-chip { padding: 10px 16px; font-size: 14px; } }
+@media (min-width: 480px)  { .sb-chip { padding: 8px 14px; font-size: 13px; } }
+@media (min-width: 640px)  { .sb-chip { padding: 10px 16px; font-size: 14px; } }
 @media (pointer: coarse) { .sb-chip { cursor: pointer; } }
 .sb-chip:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--color-ink); }
 .sb-chip.primary { background: var(--color-ink); color: var(--color-cream); }

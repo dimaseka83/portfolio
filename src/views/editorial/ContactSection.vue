@@ -14,6 +14,10 @@ const sub = {
   en: "Available for full-time roles, freelance, and fun collaborations.",
   id: "Tersedia untuk peran full-time, freelance, dan kolaborasi seru.",
 };
+const waHref = computed(() => {
+  const msg = encodeURIComponent(t(d.waMessage));
+  return `https://wa.me/62895360426592?text=${msg}`;
+});
 </script>
 
 <template>
@@ -29,9 +33,7 @@ const sub = {
       <div class="ed-contact-links">
         <a :href="d.linkedin" target="_blank" rel="noopener" class="ed-contact-link">LinkedIn ↗</a>
         <a :href="telHref" class="ed-contact-link">{{ d.phone }}</a>
-        <a :href="d.website" target="_blank" rel="noopener" class="ed-contact-link">
-          dhimasekaprasetya.netlify.app ↗
-        </a>
+        <a :href="waHref" target="_blank" rel="noopener" class="ed-contact-link">WhatsApp ↗</a>
       </div>
     </div>
     <div class="ed-footer">

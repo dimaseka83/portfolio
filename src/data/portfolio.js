@@ -11,6 +11,10 @@ export const PORTFOLIO = {
   },
   email: "dimaseka83@gmail.com",
   phone: "+62 895-3604-26592",
+  waMessage: {
+    en: "Hi Dhimas! I came across your portfolio and I'm interested in discussing a potential collaboration. Can we chat?",
+    id: "Halo Dhimas! Saya tertarik untuk berdiskusi lebih lanjut mengenai peluang kerja sama. Boleh kita ngobrol?",
+  },
   linkedin: "https://www.linkedin.com/in/dhimas-prasetya",
   website: "https://dhimasekaprasetya.netlify.app/",
   role: { en: "Full Stack Developer", id: "Full Stack Developer" },

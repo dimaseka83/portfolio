@@ -4,10 +4,14 @@ import { PORTFOLIO } from "@/data/portfolio.js";
 import { useI18n } from "@/composables/useI18n.js";
 
 const d = PORTFOLIO;
-const { lang } = useI18n();
+const { lang, t } = useI18n();
 
 const mailHref = "mailto:" + d.email;
 const telHref = computed(() => "tel:" + d.phone.replace(/\s/g, ""));
+const waHref = computed(() => {
+  const msg = encodeURIComponent(t(d.waMessage));
+  return `https://wa.me/62895360426592?text=${msg}`;
+});
 </script>
 
 <template>
@@ -24,6 +28,7 @@ const telHref = computed(() => "tel:" + d.phone.replace(/\s/g, ""));
       <div class="sb-contact-links">
         <a :href="d.linkedin" target="_blank" rel="noopener" class="sb-contact-link">LinkedIn ↗</a>
         <a :href="telHref" class="sb-contact-link">{{ d.phone }}</a>
+        <a :href="waHref" target="_blank" rel="noopener" class="sb-contact-link">WhatsApp ↗</a>
       </div>
     </div>
     <div class="sb-footer">© 2026 {{ d.name }} · Made with caffeine &amp; curiosity</div>

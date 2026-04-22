@@ -134,7 +134,7 @@ export const PORTFOLIO = {
         en: "Scalable cloud-based ERP serving enterprise clients — inventory, procurement, accounting and beyond.",
         id: "ERP berbasis cloud yang scalable untuk klien enterprise — inventori, procurement, akuntansi, dan lebih.",
       },
-      stack: ["Ruby on Rails", "Vue.js", "MySQL"],
+      stack: ["Ruby on Rails", "Vue.js", "Tailwind", "MySQL"],
       accent: "blue",
     },
     {

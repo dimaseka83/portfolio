@@ -19,8 +19,8 @@ export const PORTFOLIO = {
   website: "https://dhimasekaprasetya.netlify.app/",
   role: { en: "Full Stack Developer", id: "Full Stack Developer" },
   rotatingWords: {
-    en: ["Ruby on Rails", "Vue.js", "Nuxt.js", "Laravel", "GraphQL", "TypeScript"],
-    id: ["Ruby on Rails", "Vue.js", "Nuxt.js", "Laravel", "GraphQL", "TypeScript"],
+    en: ["Ruby on Rails", "Vue.js", "Nuxt.js", "Tailwind", "Laravel", "MySQL", "TypeScript"],
+    id: ["Ruby on Rails", "Vue.js", "Nuxt.js", "Tailwind", "Laravel", "MySQL", "TypeScript"],
   },
   summary: {
     en: "Full Stack Developer with 4+ years of experience building web applications across industries — from ERP systems to e-commerce platforms. Currently shipping scalable business solutions at PT Turboly with Ruby on Rails and Vue.js.",
@@ -44,11 +44,11 @@ export const PORTFOLIO = {
   ],
   skills: {
     languages: ["JavaScript", "TypeScript", "Ruby", "PHP"],
-    frontend: ["Vue.js", "Nuxt.js", "Vuetify", "Bootstrap"],
-    backend: ["Ruby on Rails", "Laravel", "GraphQL"],
+    frontend: ["Vue.js", "Nuxt.js", "Tailwind", "Vuetify", "Bootstrap"],
+    backend: ["Ruby on Rails", "Laravel", "MySQL"],
     tools: ["Git", "WooCommerce", "REST APIs"],
   },
-  topSkills: ["Ruby on Rails", "Vue.js", "Nuxt.js", "Laravel", "TypeScript", "GraphQL"],
+  topSkills: ["Ruby on Rails", "Vue.js", "Nuxt.js", "Tailwind", "Laravel", "TypeScript", "MySQL"],
   experience: [
     {
       company: "Turboly",
@@ -66,7 +66,7 @@ export const PORTFOLIO = {
           "Berkolaborasi dengan tim lintas fungsi untuk merilis fitur dan mengoptimalkan performa.",
         ],
       },
-      tags: ["Ruby on Rails", "Vue.js", "GraphQL"],
+      tags: ["Ruby on Rails", "Vue.js", "Tailwind", "MySQL"],
     },
     {
       company: "Elitech Technovision",
@@ -77,15 +77,15 @@ export const PORTFOLIO = {
         en: [
           "Built and maintained front-end modules for an ERP system serving Sinko Prima Alloy using Vue.js.",
           "Developed responsive, cross-browser interfaces with Vuetify and Bootstrap.",
-          "Integrated GraphQL APIs for efficient data fetching and real-time updates.",
+          "Integrated MySQL APIs for efficient data fetching and real-time updates.",
         ],
         id: [
           "Membangun dan memelihara modul front-end sistem ERP untuk Sinko Prima Alloy menggunakan Vue.js.",
           "Mengembangkan antarmuka responsif dan cross-browser dengan Vuetify dan Bootstrap.",
-          "Mengintegrasikan GraphQL API untuk pengambilan data yang efisien dan update real-time.",
+          "Mengintegrasikan MySQL API untuk pengambilan data yang efisien dan update real-time.",
         ],
       },
-      tags: ["Vue.js", "Vuetify", "GraphQL"],
+      tags: ["Vue.js", "Vuetify", "MySQL"],
     },
     {
       company: "Pia Cap Mangkok Tidar Malang",
@@ -134,7 +134,7 @@ export const PORTFOLIO = {
         en: "Scalable cloud-based ERP serving enterprise clients — inventory, procurement, accounting and beyond.",
         id: "ERP berbasis cloud yang scalable untuk klien enterprise — inventori, procurement, akuntansi, dan lebih.",
       },
-      stack: ["Ruby on Rails", "Vue.js", "GraphQL"],
+      stack: ["Ruby on Rails", "Vue.js", "MySQL"],
       accent: "blue",
     },
     {
@@ -144,7 +144,7 @@ export const PORTFOLIO = {
         en: "Front-end modules for manufacturing ERP serving Sinko Prima Alloy — responsive and production-grade.",
         id: "Modul front-end ERP manufaktur untuk Sinko Prima Alloy — responsif dan siap produksi.",
       },
-      stack: ["Vue.js", "Vuetify", "GraphQL"],
+      stack: ["Vue.js", "Vuetify", "MySQL"],
       accent: "orange",
     },
     {

@@ -91,6 +91,8 @@ function slug(name) {
 .tm-project-vis.a-orange { background: linear-gradient(135deg, #ff5c2b22, #ffa65722); }
 .tm-project-vis.a-green  { background: linear-gradient(135deg, #3fb95022, #14ae5c22); }
 .tm-project-vis.a-yellow { background: linear-gradient(135deg, #eab30822, #ffe58f22); }
+.tm-project-vis.a-pink   { background: linear-gradient(135deg, #e91e8c22, #f9a8d422); }
+.tm-project-vis.a-purple { background: linear-gradient(135deg, #7c3aed22, #c4b5fd22); }
 .tm-project-vis::before {
   content: "";
   position: absolute;

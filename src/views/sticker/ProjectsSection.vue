@@ -93,6 +93,8 @@ const { lang, t } = useI18n();
 .sb-project-vis.a-orange { background: var(--color-orange); color: #fff; }
 .sb-project-vis.a-green  { background: var(--color-green); color: #fff; }
 .sb-project-vis.a-yellow { background: var(--color-yellow); color: #111; }
+.sb-project-vis.a-pink   { background: #e91e8c; color: #fff; }
+.sb-project-vis.a-purple { background: #7c3aed; color: #fff; }
 .sb-project-vis::before {
   content: "";
   position: absolute;

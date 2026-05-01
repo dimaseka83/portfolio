@@ -89,6 +89,8 @@ const kicker = { en: "04 / Selected Work", id: "04 / Karya Pilihan" };
 .ed-project-vis.a-orange { background: linear-gradient(135deg, #ff5c2b, #ffb199); }
 .ed-project-vis.a-green  { background: linear-gradient(135deg, #14ae5c, #6fdca3); }
 .ed-project-vis.a-yellow { background: linear-gradient(135deg, #eab308, #ffe58f); }
+.ed-project-vis.a-pink   { background: linear-gradient(135deg, #e91e8c, #f9a8d4); }
+.ed-project-vis.a-purple { background: linear-gradient(135deg, #7c3aed, #c4b5fd); }
 .ed-project-vis::after {
   content: "";
   position: absolute;

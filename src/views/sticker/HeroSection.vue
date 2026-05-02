@@ -16,7 +16,7 @@ const waHref = computed(() => {
   return `https://wa.me/62895360426592?text=${msg}`;
 });
 const writeMe = { en: "Write me", id: "Kirim email" };
-const cvHref  = "https://drive.google.com/file/d/1VkQveFeKLkeoVIn9wIYNAw4OvDuAXkiY/view?usp=sharing";
+const cvHref  = "https://drive.google.com/file/d/1pq7PPgJo3wt_c6FEig8VJiv9B5bl_RAr/view?usp=sharing";
 </script>
 
 <template>

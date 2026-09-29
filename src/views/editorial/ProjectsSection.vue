@@ -23,13 +23,22 @@ const kicker = { en: "04 / Selected Work", id: "04 / Karya Pilihan" };
         <article class="ed-project">
           <div class="ed-project-no">Project — {{ String(i + 1).padStart(2, "0") }}</div>
           <div class="ed-project-vis" :class="`a-${p.accent}`">
-            <div class="ed-project-vis-label">{{ p.name }}</div>
+            <img v-if="p.image" :src="p.image" :alt="p.name" class="ed-project-img" />
+            <div v-else class="ed-project-vis-label">{{ p.name }}</div>
           </div>
           <h3 class="ed-project-title">{{ p.name }}</h3>
           <div class="ed-project-kind">{{ t(p.kind) }}</div>
           <p class="ed-project-blurb">{{ t(p.blurb) }}</p>
+          <p v-if="p.note" class="ed-project-note">
+            {{ t(p.note) }}
+            <a v-if="p.noteUrl" :href="p.noteUrl" target="_blank" rel="noopener noreferrer" class="ed-note-link">{{ lang === "en" ? "View demo" : "Lihat demo" }} ↗</a>
+          </p>
           <div class="ed-project-stack">
             <span v-for="s in p.stack" :key="s" class="ed-tag">{{ s }}</span>
+          </div>
+          <div v-if="p.url || p.github" class="ed-project-links">
+            <a v-if="p.url" :href="p.url" target="_blank" rel="noopener noreferrer" class="ed-link">{{ lang === "en" ? "Live site" : "Situs live" }} ↗</a>
+            <a v-if="p.github" :href="p.github" target="_blank" rel="noopener noreferrer" class="ed-link">GitHub ↗</a>
           </div>
         </article>
       </RevealBlock>
@@ -126,6 +135,26 @@ const kicker = { en: "04 / Selected Work", id: "04 / Karya Pilihan" };
   margin-bottom: 14px;
 }
 .ed-project-blurb { color: var(--color-ink-soft); margin-bottom: 18px; text-wrap: pretty; }
+.ed-project-note {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--color-ink-mute);
+  background: var(--color-cream-2);
+  border-left: 2px solid var(--color-blue);
+  border-radius: 4px;
+  padding: 10px 12px;
+  margin: -6px 0 18px;
+}
+.ed-note-link {
+  display: inline-block;
+  margin-left: 4px;
+  color: var(--color-blue);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.ed-note-link:hover { text-decoration: underline; }
 .ed-project-stack { display: flex; gap: 6px; flex-wrap: wrap; }
 .ed-tag {
   font-family: var(--font-mono);
@@ -135,4 +164,21 @@ const kicker = { en: "04 / Selected Work", id: "04 / Karya Pilihan" };
   background: var(--color-cream-2);
   color: var(--color-ink-soft);
 }
+.ed-project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+.ed-project-links { display: flex; gap: 14px; margin-top: 14px; }
+.ed-link {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-blue);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.ed-link:hover { border-color: var(--color-blue); }
 </style>

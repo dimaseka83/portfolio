@@ -4,7 +4,7 @@ import { useI18n } from "@/composables/useI18n.js";
 import RevealBlock from "@/components/RevealBlock.vue";
 
 const d = PORTFOLIO;
-const { t } = useI18n();
+const { lang, t } = useI18n();
 
 function slug(name) {
   return name.toLowerCase().replace(/\s+/g, "-");
@@ -23,15 +23,26 @@ function slug(name) {
       <RevealBlock v-for="(p, i) in d.projects" :key="i" :delay="i * 70">
         <article class="tm-project">
           <div class="tm-project-vis" :class="`a-${p.accent}`">
-            <div class="tm-project-vis-tag">./{{ slug(p.name) }}</div>
-            <div class="tm-project-vis-name">&lt;{{ p.name }}/&gt;</div>
+            <img v-if="p.image" :src="p.image" :alt="p.name" class="tm-project-img" />
+            <template v-else>
+              <div class="tm-project-vis-tag">./{{ slug(p.name) }}</div>
+              <div class="tm-project-vis-name">&lt;{{ p.name }}/&gt;</div>
+            </template>
           </div>
           <div class="tm-project-body">
             <div class="tm-project-kind">{{ t(p.kind) }}</div>
             <h3>{{ p.name }}</h3>
             <p>{{ t(p.blurb) }}</p>
+            <p v-if="p.note" class="tm-project-note">
+              {{ t(p.note) }}
+              <a v-if="p.noteUrl" :href="p.noteUrl" target="_blank" rel="noopener noreferrer" class="tm-note-link">{{ lang === "en" ? "View demo" : "Lihat demo" }} ↗</a>
+            </p>
             <div class="tm-project-stack">
               <span v-for="s in p.stack" :key="s" class="tm-tag">{{ s }}</span>
+            </div>
+            <div v-if="p.url || p.github" class="tm-project-links">
+              <a v-if="p.url" :href="p.url" target="_blank" rel="noopener noreferrer" class="tm-link">Live ↗</a>
+              <a v-if="p.github" :href="p.github" target="_blank" rel="noopener noreferrer" class="tm-link">GitHub ↗</a>
             </div>
           </div>
         </article>
@@ -140,6 +151,25 @@ function slug(name) {
   margin-bottom: 14px;
   text-wrap: pretty;
 }
+.tm-project-note {
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: #8b949e;
+  background: rgba(125, 133, 144, 0.08);
+  border-left: 2px solid #7ca3ff;
+  border-radius: 4px;
+  padding: 9px 11px;
+  margin: -2px 0 14px;
+}
+.tm-note-link {
+  display: inline-block;
+  margin-left: 4px;
+  color: #7ca3ff;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.tm-note-link:hover { text-decoration: underline; }
 .tm-project-stack { display: flex; gap: 6px; flex-wrap: wrap; }
 .tm-tag {
   font-size: 11px;
@@ -149,4 +179,20 @@ function slug(name) {
   color: #7ca3ff;
   border: 1px solid rgba(124, 163, 255, 0.25);
 }
+.tm-project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+.tm-project-links { display: flex; gap: 14px; margin-top: 14px; }
+.tm-link {
+  font-size: 12px;
+  color: #7ca3ff;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.tm-link:hover { border-color: #7ca3ff; }
 </style>

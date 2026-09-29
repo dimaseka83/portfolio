@@ -22,13 +22,22 @@ const { lang, t } = useI18n();
       <RevealBlock v-for="(p, i) in d.projects" :key="i" :delay="i * 80">
         <article class="sb-project">
           <div class="sb-project-vis" :class="`a-${p.accent}`">
-            <div class="sb-project-name">{{ p.name }}</div>
+            <img v-if="p.image" :src="p.image" :alt="p.name" class="sb-project-img" />
+            <div v-else class="sb-project-name">{{ p.name }}</div>
           </div>
           <div class="kind">{{ t(p.kind) }}</div>
           <h3>{{ p.name }}</h3>
           <p>{{ t(p.blurb) }}</p>
+          <p v-if="p.note" class="sb-project-note">
+            {{ t(p.note) }}
+            <a v-if="p.noteUrl" :href="p.noteUrl" target="_blank" rel="noopener noreferrer" class="sb-note-link">{{ lang === "en" ? "View demo" : "Lihat demo" }} ↗</a>
+          </p>
           <div class="sb-project-stack">
             <span v-for="s in p.stack" :key="s" class="sb-stack-tag">{{ s }}</span>
+          </div>
+          <div v-if="p.url || p.github" class="sb-project-links">
+            <a v-if="p.url" :href="p.url" target="_blank" rel="noopener noreferrer" class="sb-link">{{ lang === "en" ? "Live site" : "Situs live" }} ↗</a>
+            <a v-if="p.github" :href="p.github" target="_blank" rel="noopener noreferrer" class="sb-link">GitHub ↗</a>
           </div>
         </article>
       </RevealBlock>
@@ -129,6 +138,26 @@ const { lang, t } = useI18n();
 @media (min-width: 640px) { .sb-project .kind { margin-bottom: 10px; } }
 .sb-project p { color: var(--color-ink-soft); text-wrap: pretty; margin-bottom: 12px; font-size: 14px; }
 @media (min-width: 640px) { .sb-project p { margin-bottom: 14px; font-size: inherit; } }
+.sb-project-note {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--color-ink-soft);
+  background: var(--color-cream-2);
+  border: 1.5px dashed var(--color-ink);
+  border-radius: 10px;
+  padding: 9px 12px;
+  margin: -2px 0 14px;
+}
+.sb-note-link {
+  display: inline-block;
+  margin-left: 4px;
+  color: var(--color-orange);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+  white-space: nowrap;
+}
 .sb-project-stack { display: flex; gap: 6px; flex-wrap: wrap; }
 .sb-stack-tag {
   font-family: var(--font-mono);
@@ -138,4 +167,23 @@ const { lang, t } = useI18n();
   background: var(--color-cream-2);
   border: 1px solid var(--color-ink);
 }
+.sb-project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+.sb-project-links { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+.sb-link {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-ink);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1.5px solid var(--color-ink);
+  transition: background 0.2s, color 0.2s;
+}
+.sb-link:hover { background: var(--color-orange); color: #fff; border-color: var(--color-orange); }
 </style>

@@ -99,12 +99,12 @@ export const PORTFOLIO = {
       location: "Malang, Indonesia",
       bullets: {
         en: [
-          "Built and customized an e-commerce website (piatacamilan.com) using WordPress and WooCommerce, and developed a Point of Sales system using Laravel.",
+          "Built and customized an e-commerce website using WordPress and WooCommerce, and developed a Point of Sales system using Laravel.",
           "Managed network infrastructure across two office locations.",
           "Handled the full development lifecycle — requirements to deployment.",
         ],
         id: [
-          "Membangun dan mengkustomisasi website e-commerce (piatacamilan.com) menggunakan WordPress dan WooCommerce, serta mengembangkan sistem Point of Sales menggunakan Laravel.",
+          "Membangun dan mengkustomisasi website e-commerce menggunakan WordPress dan WooCommerce, serta mengembangkan sistem Point of Sales menggunakan Laravel.",
           "Mengelola infrastruktur jaringan di dua lokasi kantor.",
           "Menangani siklus pengembangan penuh — dari requirement hingga deployment.",
         ],
@@ -141,6 +141,11 @@ export const PORTFOLIO = {
       },
       stack: ["Ruby on Rails", "Vue.js", "Tailwind", "MySQL"],
       accent: "blue",
+      note: {
+        en: "Under NDA — code and live demo can't be shared. See my personal Rails ERP build below for proof of hands-on ERP experience.",
+        id: "Terikat NDA — kode dan demo live tidak bisa dibagikan. Lihat proyek ERP Rails personal saya di bawah sebagai bukti pengalaman langsung membangun ERP.",
+      },
+      noteUrl: "https://simple-erp-dhimas-prasetya.netlify.app/",
     },
     {
       name: "Sinko ERP",
@@ -151,6 +156,23 @@ export const PORTFOLIO = {
       },
       stack: ["Vue.js", "Vuetify", "MySQL"],
       accent: "orange",
+      note: {
+        en: "Under NDA — code and live demo can't be shared. See my personal Rails ERP build below for proof of hands-on ERP experience.",
+        id: "Terikat NDA — kode dan demo live tidak bisa dibagikan. Lihat proyek ERP Rails personal saya di bawah sebagai bukti pengalaman langsung membangun ERP.",
+      },
+      noteUrl: "https://simple-erp-dhimas-prasetya.netlify.app/",
+    },
+    {
+      name: "Simple ERP",
+      kind: { en: "Personal Rails ERP Build", id: "Proyek ERP Rails Personal" },
+      blurb: {
+        en: "A self-initiated ERP built end-to-end with Ruby on Rails to demonstrate real business workflow knowledge — Purchase Order, Inventory, and Sales Order in one connected flow. Built since client ERP work at Turboly, Sinko, and Pia Cap Mangkok is under NDA.",
+        id: "ERP yang dibangun sendiri secara end-to-end dengan Ruby on Rails untuk menunjukkan pemahaman workflow bisnis nyata — Purchase Order, Inventory, dan Sales Order dalam satu alur yang terhubung. Dibuat karena proyek ERP klien di Turboly, Sinko, dan Pia Cap Mangkok terikat NDA.",
+      },
+      stack: ["Ruby on Rails", "MySQL", "Tailwind"],
+      accent: "blue",
+      url: "https://simple-erp-dhimas-prasetya.netlify.app/",
+      github: "https://github.com/dimaseka83/simple-erp-rails-dhimas-prasetya",
     },
     {
       name: "SIKMEN",
@@ -161,6 +183,8 @@ export const PORTFOLIO = {
       },
       stack: ["Nuxt.js", "TypeScript", "REST APIs"],
       accent: "pink",
+      url: "https://sikmen.netlify.app/",
+      github: "https://github.com/dimaseka83/capstone-fe",
     },
     {
       name: "Sistem Informasi Raport Online",
@@ -173,24 +197,19 @@ export const PORTFOLIO = {
       accent: "purple",
     },
     {
-      name: "Pia Tacamilan",
-      kind: { en: "E-commerce + POS", id: "E-commerce + POS" },
-      blurb: {
-        en: "Full e-commerce site (piatacamilan.com) and Point of Sales system for a local pastry brand.",
-        id: "Website e-commerce lengkap (piatacamilan.com) dan sistem Point of Sales untuk brand pastry lokal.",
-      },
-      stack: ["Laravel", "MySQL", "Bootstrap"],
-      accent: "green",
-    },
-    {
       name: "ERP Pia Cap Mangkok",
-      kind: { en: "Published Research — ERP", id: "Riset Terbit — ERP" },
+      kind: { en: "Enterprise Resource Planning", id: "Enterprise Resource Planning" },
       blurb: {
-        en: "Web-based ERP design for Pia Cap Mangkok Malang — published research blending theory and practice.",
-        id: "Desain ERP berbasis web untuk Pia Cap Mangkok Malang — riset terbit yang menggabungkan teori dan praktik.",
+        en: "Web-based ERP built for Pia Cap Mangkok Malang, later published as research blending theory and real practice.",
+        id: "ERP berbasis web yang dibangun untuk Pia Cap Mangkok Malang, kemudian diterbitkan sebagai riset yang menggabungkan teori dan praktik nyata.",
       },
-      stack: ["Laravel", "Research", "UX"],
+      stack: ["Laravel", "MySQL", "Research", "UX"],
       accent: "yellow",
+      note: {
+        en: "Under NDA — code and live demo can't be shared. See my personal Rails ERP build below for proof of hands-on ERP experience.",
+        id: "Terikat NDA — kode dan demo live tidak bisa dibagikan. Lihat proyek ERP Rails personal saya di bawah sebagai bukti pengalaman langsung membangun ERP.",
+      },
+      noteUrl: "https://simple-erp-dhimas-prasetya.netlify.app/",
     },
   ],
   certifications: [

@@ -2,12 +2,15 @@
  * Typewriter effect. Reactive to the `words` source ref — restarts cleanly when
  * the word list changes (e.g. on language toggle).
  */
-import { ref, watch, onBeforeUnmount } from "vue";
+import { ref, computed, watch, onBeforeUnmount } from "vue";
 
 export function useTyping(wordsRef, opts = {}) {
   const speed = opts.speed || 85;
   const pause = opts.pause || 1200;
   const text = ref("");
+  // Longest word length — used by callers to reserve layout width and avoid CLS
+  // as the typed text grows/shrinks character by character.
+  const maxLength = computed(() => (wordsRef.value || []).reduce((m, w) => Math.max(m, w.length), 0));
 
   let idx = 0, sub = 0, deleting = false;
   let timer = null;
@@ -51,5 +54,5 @@ export function useTyping(wordsRef, opts = {}) {
   );
   onBeforeUnmount(stop);
 
-  return { text };
+  return { text, maxLength };
 }

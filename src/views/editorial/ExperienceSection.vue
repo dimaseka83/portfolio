@@ -88,7 +88,7 @@ const kicker = { en: "03 / Experience", id: "03 / Pengalaman" };
   font-size: 10px;
   padding: 2px 8px;
   border-radius: 999px;
-  background: var(--color-green);
+  background: var(--color-green-text);
   color: #fff;
   letter-spacing: 0.08em;
 }

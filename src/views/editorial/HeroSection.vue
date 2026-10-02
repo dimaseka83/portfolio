@@ -8,7 +8,7 @@ import RevealBlock from "@/components/RevealBlock.vue";
 const d = PORTFOLIO;
 const { lang, t } = useI18n();
 const words = computed(() => d.rotatingWords[lang.value]);
-const { text: typed } = useTyping(words, { speed: 85, pause: 1200 });
+const { text: typed, maxLength } = useTyping(words, { speed: 85, pause: 1200 });
 
 const mailHref = "mailto:" + d.email;
 
@@ -34,12 +34,12 @@ const cvHref  = "https://drive.google.com/file/d/1IFBdqHlOVOLpupnS0gqH-l3hdtixkM
       <template v-if="lang === 'en'">
         Building <span class="italic">scalable</span><br />
         web <span class="underline">apps</span> with<br />
-        <span class="typing">{{ typed }}</span>
+        <span class="typing" :style="{ minWidth: maxLength + 'ch' }">{{ typed }}</span>
       </template>
       <template v-else>
         Membangun web<br />
         <span class="italic">scalable</span> pakai<br />
-        <span class="typing">{{ typed }}</span>
+        <span class="typing" :style="{ minWidth: maxLength + 'ch' }">{{ typed }}</span>
       </template>
     </h1>
 
@@ -160,6 +160,7 @@ const cvHref  = "https://drive.google.com/file/d/1IFBdqHlOVOLpupnS0gqH-l3hdtixkM
   color: var(--color-blue);
   font-style: italic;
   position: relative;
+  display: inline-block;
 }
 .ed-hero-title .typing::after {
   content: "";

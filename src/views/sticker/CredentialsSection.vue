@@ -21,19 +21,19 @@ const { lang, t } = useI18n();
     <div class="sb-creds">
       <RevealBlock :delay="120">
         <div class="sb-creds-card">
-          <h4><span class="highlight">{{ lang === "en" ? "Certifications" : "Sertifikasi" }}</span></h4>
+          <h3><span class="highlight">{{ lang === "en" ? "Certifications" : "Sertifikasi" }}</span></h3>
           <ul><li v-for="c in d.certifications" :key="c">{{ c }}</li></ul>
         </div>
       </RevealBlock>
       <RevealBlock :delay="200">
         <div class="sb-creds-card">
-          <h4><span class="blue">{{ lang === "en" ? "Awards" : "Penghargaan" }}</span></h4>
+          <h3><span class="blue">{{ lang === "en" ? "Awards" : "Penghargaan" }}</span></h3>
           <ul><li v-for="(a, i) in d.awards" :key="i">{{ t(a) }}</li></ul>
         </div>
       </RevealBlock>
       <RevealBlock :delay="280">
         <div class="sb-creds-card">
-          <h4><span class="green">{{ lang === "en" ? "Publications" : "Publikasi" }}</span></h4>
+          <h3><span class="green">{{ lang === "en" ? "Publications" : "Publikasi" }}</span></h3>
           <ul><li v-for="(p, i) in d.publications" :key="i">{{ p.title }}</li></ul>
         </div>
       </RevealBlock>
@@ -71,15 +71,15 @@ const { lang, t } = useI18n();
 }
 @media (min-width: 640px) { .sb-creds-card { padding: 28px; border-radius: 22px; box-shadow: 5px 5px 0 var(--color-ink); } }
 .sb-creds-card:hover { transform: translate(-3px, -3px); box-shadow: 8px 8px 0 var(--color-ink); }
-.sb-creds-card h4 {
+.sb-creds-card h3 {
   font-family: var(--font-display);
   font-size: 28px;
   font-weight: 400;
   margin: 0 0 18px;
 }
-.sb-creds-card h4 .highlight { background: var(--color-yellow); padding: 0 6px; color: #111; }
-.sb-creds-card h4 .blue      { background: var(--color-blue);   color: #fff; padding: 0 6px; }
-.sb-creds-card h4 .green     { background: var(--color-green);  color: #fff; padding: 0 6px; }
+.sb-creds-card h3 .highlight { background: var(--color-yellow); padding: 0 6px; color: #111; }
+.sb-creds-card h3 .blue      { background: var(--color-blue);   color: #fff; padding: 0 6px; }
+.sb-creds-card h3 .green     { background: var(--color-green-text);  color: #fff; padding: 0 6px; }
 .sb-creds-card ul {
   list-style: none;
   padding: 0;

@@ -10,7 +10,7 @@ import ContactSection from "./ContactSection.vue";
 </script>
 
 <template>
-  <div class="variant-terminal tm-root">
+  <main class="variant-terminal tm-root">
     <HeroSection />
     <AboutSection />
     <SkillsSection />
@@ -20,7 +20,7 @@ import ContactSection from "./ContactSection.vue";
     <EducationSection />
     <ContactSection />
     <div class="h-20" aria-hidden="true" />
-  </div>
+  </main>
 </template>
 
 <style scoped>

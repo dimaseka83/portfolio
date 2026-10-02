@@ -8,7 +8,7 @@ import RevealBlock from "@/components/RevealBlock.vue";
 const d = PORTFOLIO;
 const { lang, t } = useI18n();
 const words = computed(() => d.rotatingWords[lang.value]);
-const { text: typed } = useTyping(words, { speed: 85, pause: 1200 });
+const { text: typed, maxLength } = useTyping(words, { speed: 85, pause: 1200 });
 
 const mailHref = "mailto:" + d.email;
 const waHref = computed(() => {
@@ -30,12 +30,12 @@ const cvHref  = "https://drive.google.com/file/d/1pq7PPgJo3wt_c6FEig8VJiv9B5bl_R
       <template v-if="lang === 'en'">
         Hi, I'm <span class="highlight">Dhimas.</span><br />
         I build <span class="scribble">scalable</span> web apps<br />
-        with <span class="typed">{{ typed }}</span><span class="typed">|</span>
+        with <span class="typed" :style="{ minWidth: maxLength + 'ch' }">{{ typed }}</span><span class="typed">|</span>
       </template>
       <template v-else>
         Hai, saya <span class="highlight">Dhimas.</span><br />
         Saya buat web <span class="scribble">scalable</span><br />
-        pakai <span class="typed">{{ typed }}</span><span class="typed">|</span>
+        pakai <span class="typed" :style="{ minWidth: maxLength + 'ch' }">{{ typed }}</span><span class="typed">|</span>
       </template>
     </h1>
 
@@ -109,8 +109,8 @@ const cvHref  = "https://drive.google.com/file/d/1pq7PPgJo3wt_c6FEig8VJiv9B5bl_R
 .sticker-2 { transform: rotate(4deg); }
 
 .sb-sticker.blue   { background: var(--color-blue); color: #fff; }
-.sb-sticker.orange { background: var(--color-orange); color: #fff; }
-.sb-sticker.green  { background: var(--color-green); color: #fff; }
+.sb-sticker.orange { background: var(--color-orange-text); color: #fff; }
+.sb-sticker.green  { background: var(--color-green-text); color: #fff; }
 
 /* Tablet and up: stickers float absolutely */
 @media (min-width: 640px) {
@@ -178,7 +178,7 @@ const cvHref  = "https://drive.google.com/file/d/1pq7PPgJo3wt_c6FEig8VJiv9B5bl_R
   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 14'><path d='M2 8 Q 15 2, 30 7 T 60 7 T 98 6' stroke='%23FF5C2B' stroke-width='2.5' fill='none' stroke-linecap='round'/></svg>") no-repeat;
   background-size: 100% 100%;
 }
-.sb-hero-title .typed { color: var(--color-blue); }
+.sb-hero-title .typed { color: var(--color-blue); display: inline-block; }
 
 .sb-hero-body {
   display: grid;
@@ -223,8 +223,8 @@ const cvHref  = "https://drive.google.com/file/d/1pq7PPgJo3wt_c6FEig8VJiv9B5bl_R
 .sb-chip:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--color-ink); }
 .sb-chip.primary { background: var(--color-ink); color: var(--color-cream); }
 .sb-chip.primary:hover { background: var(--color-blue); border-color: var(--color-ink); }
-.sb-chip.orange { background: var(--color-orange); color: #fff; }
-.sb-chip.green  { background: var(--color-green);  color: #fff; }
+.sb-chip.orange { background: var(--color-orange-text); color: #fff; }
+.sb-chip.green  { background: var(--color-green-text);  color: #fff; }
 
 .sb-polaroid {
   background: #fff;

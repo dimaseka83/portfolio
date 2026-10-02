@@ -27,7 +27,7 @@ const groups = [
     <div class="ed-skills-grid">
       <RevealBlock v-for="(g, i) in groups" :key="g.key" :delay="120 + i * 80">
         <div class="ed-skills-col">
-          <h4>{{ t(g.label) }}</h4>
+          <h3>{{ t(g.label) }}</h3>
           <ul>
             <li v-for="s in g.items" :key="s">{{ s }}</li>
           </ul>
@@ -76,7 +76,7 @@ const groups = [
   transform: translateY(-6px);
   box-shadow: 0 1px 2px rgba(15, 17, 20, 0.04), 0 10px 30px rgba(15, 17, 20, 0.06);
 }
-.ed-skills-col h4 {
+.ed-skills-col h3 {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.12em;

@@ -119,7 +119,7 @@ const { lang, t } = useI18n();
   position: absolute;
   top: -14px;
   right: 20px;
-  background: var(--color-green);
+  background: var(--color-green-text);
   color: #fff;
   padding: 6px 12px;
   border-radius: 999px;

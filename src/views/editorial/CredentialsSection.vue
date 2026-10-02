@@ -24,7 +24,7 @@ const pubsH   = { en: "Publications",      id: "Publikasi" };
     <div class="ed-creds-grid">
       <RevealBlock :delay="120">
         <div class="ed-creds-col">
-          <h4>{{ t(certsH) }}</h4>
+          <h3>{{ t(certsH) }}</h3>
           <ul>
             <li v-for="c in d.certifications" :key="c">{{ c }}</li>
           </ul>
@@ -32,7 +32,7 @@ const pubsH   = { en: "Publications",      id: "Publikasi" };
       </RevealBlock>
       <RevealBlock :delay="200">
         <div class="ed-creds-col">
-          <h4>{{ t(awardsH) }}</h4>
+          <h3>{{ t(awardsH) }}</h3>
           <ul>
             <li v-for="(a, i) in d.awards" :key="i">{{ t(a) }}</li>
           </ul>
@@ -40,7 +40,7 @@ const pubsH   = { en: "Publications",      id: "Publikasi" };
       </RevealBlock>
       <RevealBlock :delay="280">
         <div class="ed-creds-col">
-          <h4>{{ t(pubsH) }}</h4>
+          <h3>{{ t(pubsH) }}</h3>
           <ul>
             <li v-for="(p, i) in d.publications" :key="i">
               {{ p.title }}<br />
@@ -79,7 +79,7 @@ const pubsH   = { en: "Publications",      id: "Publikasi" };
 }
 @media (min-width: 640px) { .ed-creds-col { padding: 28px; } }
 :where([data-theme="dark"]) .ed-creds-col { border-color: rgba(242, 239, 232, 0.14); }
-.ed-creds-col h4 {
+.ed-creds-col h3 {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.12em;

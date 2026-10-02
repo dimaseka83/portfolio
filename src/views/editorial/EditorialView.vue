@@ -10,7 +10,7 @@ import ContactSection from "./ContactSection.vue";
 </script>
 
 <template>
-  <div class="variant-editorial">
+  <main class="variant-editorial">
     <HeroSection />
     <AboutSection />
     <SkillsSection />
@@ -20,5 +20,5 @@ import ContactSection from "./ContactSection.vue";
     <EducationSection />
     <ContactSection />
     <div class="h-20" aria-hidden="true" />
-  </div>
+  </main>
 </template>

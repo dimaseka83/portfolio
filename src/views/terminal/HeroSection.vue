@@ -8,7 +8,7 @@ import RevealBlock from "@/components/RevealBlock.vue";
 const d = PORTFOLIO;
 const { lang, t } = useI18n();
 const words = computed(() => d.rotatingWords[lang.value]);
-const { text: typed } = useTyping(words, { speed: 75, pause: 1200 });
+const { text: typed, maxLength } = useTyping(words, { speed: 75, pause: 1200 });
 const mailHref = "mailto:" + d.email;
 const cvHref  = "https://drive.google.com/file/d/1IFBdqHlOVOLpupnS0gqH-l3hdtixkMDO/view";
 </script>
@@ -43,7 +43,7 @@ const cvHref  = "https://drive.google.com/file/d/1IFBdqHlOVOLpupnS0gqH-l3hdtixkM
 
     <h1 class="tm-hero-title">
       <span class="prompt">$ </span><span>whoami<br /></span>
-      <span class="prompt">&gt; </span><span class="typed cursor-blink">{{ typed }}</span>
+      <span class="prompt">&gt; </span><span class="typed cursor-blink" :style="{ minWidth: maxLength + 'ch' }">{{ typed }}</span>
     </h1>
 
     <div class="tm-hero-grid">
@@ -166,7 +166,7 @@ const cvHref  = "https://drive.google.com/file/d/1IFBdqHlOVOLpupnS0gqH-l3hdtixkM
   color: #e6edf3;
 }
 .tm-hero-title .prompt { color: #3fb950; }
-.tm-hero-title .typed { color: #7ca3ff; }
+.tm-hero-title .typed { color: #7ca3ff; display: inline-block; }
 .tm-hero-title .cursor-blink::after {
   content: "▋";
   color: #7ca3ff;

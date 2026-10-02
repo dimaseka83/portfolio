@@ -1,0 +1,18 @@
+{
+  "specVersion": "1.0",
+  "entries": [
+    {
+      "identifier": "urn:air:dhimasekaprasetya.netlify.app:portfolio:dhimas-eka-prasetya",
+      "displayName": "Dhimas Eka Prasetya — Full Stack Developer Portfolio",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "url": "https://dhimasekaprasetya.netlify.app/llms.txt",
+      "description": "Full Stack Developer portfolio and resume for Dhimas Eka Prasetya — Ruby on Rails, Vue.js, Nuxt.js, and Laravel experience, projects, and contact details.",
+      "representativeQueries": [
+        "who is Dhimas Eka Prasetya",
+        "find a Ruby on Rails developer in Indonesia",
+        "show me Dhimas Eka Prasetya's portfolio projects",
+        "how do I contact Dhimas Eka Prasetya"
+      ]
+    }
+  ]
+}

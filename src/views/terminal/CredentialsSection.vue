@@ -18,19 +18,19 @@ const { t } = useI18n();
     <div class="tm-creds">
       <RevealBlock :delay="100">
         <div class="tm-creds-col">
-          <h4>certifications</h4>
+          <h3>certifications</h3>
           <ul><li v-for="c in d.certifications" :key="c">{{ c }}</li></ul>
         </div>
       </RevealBlock>
       <RevealBlock :delay="180">
         <div class="tm-creds-col">
-          <h4>awards</h4>
+          <h3>awards</h3>
           <ul><li v-for="(a, i) in d.awards" :key="i">{{ t(a) }}</li></ul>
         </div>
       </RevealBlock>
       <RevealBlock :delay="260">
         <div class="tm-creds-col">
-          <h4>publications</h4>
+          <h3>publications</h3>
           <ul><li v-for="(p, i) in d.publications" :key="i">{{ p.title }}</li></ul>
         </div>
       </RevealBlock>
@@ -72,12 +72,12 @@ const { t } = useI18n();
   border-radius: 10px;
   padding: 22px;
 }
-.tm-creds-col h4 {
+.tm-creds-col h3 {
   font-size: 13px;
   color: #3fb950;
   margin: 0 0 16px;
 }
-.tm-creds-col h4::before { content: "// "; color: #7d8590; }
+.tm-creds-col h3::before { content: "// "; color: #7d8590; }
 .tm-creds-col ul {
   list-style: none;
   padding: 0;

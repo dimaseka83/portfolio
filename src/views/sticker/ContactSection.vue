@@ -80,8 +80,8 @@ const waHref = computed(() => {
   transform: rotate(-6deg);
   z-index: 2;
 }
-.sb-sticker.orange { background: var(--color-orange); color: #fff; }
-.sb-sticker.green  { background: var(--color-green);  color: #fff; }
+.sb-sticker.orange { background: var(--color-orange-text); color: #fff; }
+.sb-sticker.green  { background: var(--color-green-text);  color: #fff; }
 .sb-contact-sticker-1 { top: 14px; left: 14px; font-size: 10px; padding: 7px 12px; }
 .sb-contact-sticker-2 { top: 24px; right: 14px; transform: rotate(8deg); font-size: 10px; padding: 7px 12px; }
 @media (min-width: 640px) {

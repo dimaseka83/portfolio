@@ -92,8 +92,8 @@ const { lang, t } = useI18n();
 }
 @media (min-width: 640px) { .sb-stat { padding: 24px; border-radius: 18px; box-shadow: 4px 4px 0 var(--color-ink); } }
 .sb-stat:nth-child(2) { transform: rotate(2deg); background: var(--color-blue); color: #fff; }
-.sb-stat:nth-child(3) { transform: rotate(1deg); background: var(--color-orange); color: #fff; }
-.sb-stat:nth-child(4) { transform: rotate(-2deg); background: var(--color-green); color: #fff; }
+.sb-stat:nth-child(3) { transform: rotate(1deg); background: var(--color-orange-text); color: #fff; }
+.sb-stat:nth-child(4) { transform: rotate(-2deg); background: var(--color-green-text); color: #fff; }
 .sb-stat:hover { transform: rotate(0) scale(1.05); }
 .sb-stat .n {
   font-family: var(--font-display);

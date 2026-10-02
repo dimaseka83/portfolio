@@ -1,0 +1,21 @@
+# Dhimas Eka Prasetya — Full Stack Developer
+
+> Portfolio of Dhimas Eka Prasetya, a Full Stack Developer based in Malang, Indonesia with 4+ years of experience building web applications with Ruby on Rails, Vue.js, Nuxt.js, and Laravel.
+
+Dhimas is currently a Full-Stack Developer at Turboly, building a cloud-based ERP platform with Ruby on Rails and Vue.js. He has previously built ERP front-end modules, e-commerce platforms, and Point of Sale systems, and uses AI-assisted tools to speed up development.
+
+## Pages
+
+- [Portfolio home](https://dhimasekaprasetya.netlify.app/): Summary, skills, experience, projects, and contact info.
+- [Editorial layout](https://dhimasekaprasetya.netlify.app/editorial): Same content in an alternate visual theme.
+- [Terminal layout](https://dhimasekaprasetya.netlify.app/terminal): Same content in a developer-terminal visual theme.
+
+## Projects
+
+- [Simple ERP](https://simple-erp-dhimas-prasetya.netlify.app/): Self-built Ruby on Rails ERP demonstrating Purchase Order, Inventory, and Sales Order workflows ([source](https://github.com/dimaseka83/simple-erp-rails-dhimas-prasetya)).
+- [SIKMEN](https://sikmen.netlify.app/): Menstrual cycle tracking web app built with Nuxt.js ([source](https://github.com/dimaseka83/capstone-fe)).
+
+## Contact
+
+- Email: dimaseka83@gmail.com
+- LinkedIn: [Dhimas Eka Prasetya](https://www.linkedin.com/in/dhimas-prasetya)

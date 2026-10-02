@@ -67,14 +67,13 @@ onBeforeUnmount(() => document.removeEventListener("click", onDocClick));
     </div>
 
     <!-- Dropdown menu -->
-    <div class="fn-menu" role="menu">
+    <nav class="fn-menu" aria-label="Section navigation">
       <!-- Section links -->
       <button
         v-for="s in SECTIONS"
         :key="s.id"
         class="fn-menu-item"
         :class="{ 'is-active': active === s.id }"
-        role="menuitem"
         @click="onGoto(s.id)"
       >
         <span class="fn-menu-num">{{ String(s.n).padStart(2, "0") }}</span>
@@ -91,7 +90,7 @@ onBeforeUnmount(() => document.removeEventListener("click", onDocClick));
           {{ theme === "light" ? "☼" : "☾" }}
         </button>
       </div>
-    </div>
+    </nav>
   </div>
 </template>
 
@@ -160,7 +159,7 @@ onBeforeUnmount(() => document.removeEventListener("click", onDocClick));
   border-color: var(--color-blue);
 }
 .fn-chip-other {
-  opacity: 0.45;
+  opacity: 0.6;
   font-weight: 500;
 }
 

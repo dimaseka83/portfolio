@@ -195,6 +195,7 @@ export const PORTFOLIO = {
       },
       stack: ["Laravel", "Nuxt.js", "MySQL"],
       accent: "purple",
+      url: "https://simple-siroline.netlify.app/",
     },
     {
       name: "ERP Pia Cap Mangkok",

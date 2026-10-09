@@ -15,21 +15,23 @@ const emit = defineEmits(["goto"]);
     class="fixed left-5 top-1/2 z-[150] hidden -translate-y-1/2 flex-col gap-3.5 lg:flex"
     aria-label="section navigation"
   >
-    <button
+    <a
       v-for="s in SECTIONS"
       :key="s.id"
+      :href="`#${s.id}`"
       class="nav-dot"
       :class="{ 'is-active': active === s.id }"
       :aria-label="t(s.label)"
-      @click="emit('goto', s.id)"
+      @click.prevent="emit('goto', s.id)"
     >
       <span class="nav-dot-label">{{ t(s.label) }}</span>
-    </button>
+    </a>
   </div>
 </template>
 
 <style scoped>
 .nav-dot {
+  display: block;
   width: 10px;
   height: 10px;
   border-radius: 50%;

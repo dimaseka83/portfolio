@@ -10,7 +10,7 @@ import ContactSection from "./ContactSection.vue";
 </script>
 
 <template>
-  <main class="variant-editorial">
+  <main id="main-content" class="variant-editorial">
     <HeroSection />
     <AboutSection />
     <SkillsSection />

@@ -62,7 +62,10 @@ const cvHref  = "https://drive.google.com/file/d/1IFBdqHlOVOLpupnS0gqH-l3hdtixkM
       <RevealBlock :delay="350">
         <div class="ed-hero-card">
           <div class="ed-hero-avatar">
-            <img src="/assets/dhimas.jpg" :alt="d.name" />
+            <picture>
+              <source srcset="/assets/dhimas-320.webp" type="image/webp" />
+              <img src="/assets/dhimas-320.jpg" :alt="d.name" width="320" height="320" loading="eager" decoding="async" />
+            </picture>
           </div>
           <div class="ed-hero-card-meta">
             <div class="row"><span>Name</span><span>{{ d.shortName }}</span></div>

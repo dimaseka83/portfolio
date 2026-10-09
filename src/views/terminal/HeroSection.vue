@@ -60,7 +60,10 @@ const cvHref  = "https://drive.google.com/file/d/1IFBdqHlOVOLpupnS0gqH-l3hdtixkM
       <RevealBlock :delay="220">
         <div class="tm-card">
           <div class="tm-card-avatar">
-            <img src="/assets/dhimas.jpg" :alt="d.name" />
+            <picture>
+              <source srcset="/assets/dhimas-320.webp" type="image/webp" />
+              <img src="/assets/dhimas-320.jpg" :alt="d.name" width="64" height="64" loading="eager" decoding="async" />
+            </picture>
             <div>
               <div class="tm-card-name">{{ d.name }}</div>
               <div class="tm-card-handle">@dhimas-prasetya</div>

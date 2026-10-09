@@ -69,16 +69,17 @@ onBeforeUnmount(() => document.removeEventListener("click", onDocClick));
     <!-- Dropdown menu -->
     <nav class="fn-menu" aria-label="Section navigation">
       <!-- Section links -->
-      <button
+      <a
         v-for="s in SECTIONS"
         :key="s.id"
+        :href="`#${s.id}`"
         class="fn-menu-item"
         :class="{ 'is-active': active === s.id }"
-        @click="onGoto(s.id)"
+        @click.prevent="onGoto(s.id)"
       >
         <span class="fn-menu-num">{{ String(s.n).padStart(2, "0") }}</span>
         <span>{{ t(s.label) }}</span>
-      </button>
+      </a>
 
       <!-- Mobile-only chips appended inside the menu -->
       <div class="fn-menu-chips md:hidden">

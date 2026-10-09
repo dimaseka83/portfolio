@@ -10,7 +10,7 @@ import ContactSection from "./ContactSection.vue";
 </script>
 
 <template>
-  <main class="variant-sticker sb-root">
+  <main id="main-content" class="variant-sticker sb-root">
     <HeroSection />
     <AboutSection />
     <SkillsSection />

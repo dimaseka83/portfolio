@@ -59,7 +59,10 @@ const cvHref  = "https://drive.google.com/file/d/1pq7PPgJo3wt_c6FEig8VJiv9B5bl_R
       <RevealBlock :delay="260">
         <div class="sb-polaroid">
           <div class="sb-tape" />
-          <img src="/assets/dhimas.jpg" :alt="d.name" />
+          <picture>
+            <source srcset="/assets/dhimas-640.webp 2x, /assets/dhimas-320.webp 1x" type="image/webp" />
+            <img src="/assets/dhimas-320.jpg" :alt="d.name" width="320" height="320" loading="eager" decoding="async" />
+          </picture>
           <div class="sb-polaroid-caption">— Dhimas ✨</div>
         </div>
       </RevealBlock>
@@ -240,8 +243,10 @@ const cvHref  = "https://drive.google.com/file/d/1pq7PPgJo3wt_c6FEig8VJiv9B5bl_R
   .sb-polaroid { padding: 14px 14px 50px; max-width: 320px; box-shadow: 6px 8px 0 var(--color-ink); }
 }
 .sb-polaroid:hover { transform: rotate(0) scale(1.03); }
+.sb-polaroid picture { display: block; }
 .sb-polaroid img {
   width: 100%;
+  height: auto;
   display: block;
   border-radius: 2px;
   filter: contrast(1.05);

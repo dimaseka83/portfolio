@@ -10,7 +10,7 @@ const { lang, t } = useI18n();
 const words = computed(() => d.rotatingWords[lang.value]);
 const { text: typed, maxLength } = useTyping(words, { speed: 75, pause: 1200 });
 const mailHref = "mailto:" + d.email;
-const cvHref  = "https://drive.google.com/file/d/1IFBdqHlOVOLpupnS0gqH-l3hdtixkMDO/view";
+const cvHref  = "https://drive.google.com/file/d/1Rlm6asAiw-30S4CLdUbp0q_FEPW_t03a/view?usp=drive_link";
 </script>
 
 <template>

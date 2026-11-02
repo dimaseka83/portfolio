@@ -17,7 +17,7 @@ const openLbl = { en: "Open to work", id: "Terbuka untuk peluang" };
 const writeMe = { en: "Write me", id: "Kirim email" };
 const viewCv  = { en: "View LinkedIn", id: "Lihat LinkedIn" };
 const dlCv    = { en: "Download CV", id: "Unduh CV" };
-const cvHref  = "https://drive.google.com/file/d/1IFBdqHlOVOLpupnS0gqH-l3hdtixkMDO/view";
+const cvHref  = "https://drive.google.com/file/d/1Rlm6asAiw-30S4CLdUbp0q_FEPW_t03a/view?usp=drive_link";
 </script>
 
 <template>
